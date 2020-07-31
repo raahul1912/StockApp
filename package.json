@@ -4,6 +4,7 @@
   "description": "Stock Exchange Application",
   "main": "index.js",
   "dependencies": {
+    "@types/validator": "^13.1.0",
     "compression": "^1.7.4",
     "concurrently": "^5.2.0",
     "dotenv": "^8.2.0",
@@ -12,6 +13,7 @@
     "mongoose": "^5.9.26",
     "socket.io": "^2.3.0",
     "tslint": "^6.1.2",
+    "validator": "^13.1.1",
     "ws": "^7.3.1"
   },
   "devDependencies": {
