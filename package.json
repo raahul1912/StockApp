@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Stock Exchange Application",
   "main": "index.js",
+  "engines": {
+    "node": "12.15.0"
+  },
   "dependencies": {
     "@types/validator": "^13.1.0",
     "compression": "^1.7.4",
