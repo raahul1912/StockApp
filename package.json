@@ -27,6 +27,8 @@
     "@types/ws": "^7.2.6"
   },
   "scripts": {
+    "tsc": "tsc",
+    "postinstall": "npm run tsc",
     "dev:tsc": "tsc -w",
     "dev:node": "nodemon build/server.js",
     "dev": "concurrently npm:dev:*",
