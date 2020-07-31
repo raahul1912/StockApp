@@ -16,6 +16,7 @@
     "mongoose": "^5.9.26",
     "socket.io": "^2.3.0",
     "tslint": "^6.1.2",
+    "typescript": "^3.9.7",
     "validator": "^13.1.1",
     "ws": "^7.3.1"
   },
@@ -27,8 +28,6 @@
     "@types/ws": "^7.2.6"
   },
   "scripts": {
-    "tsc": "tsc",
-    "postinstall": "npm run tsc",
     "dev:tsc": "tsc -w",
     "dev:node": "nodemon build/server.js",
     "dev": "concurrently npm:dev:*",
