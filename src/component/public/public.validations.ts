@@ -29,6 +29,37 @@ class PublicValidations {
       next();
     }
   }
+
+  /**
+   * @description Register user
+   * @param req
+   * @param res
+   * @param next
+   */
+  register(req: Request, res: Response, next: NextFunction) {
+    const { name, email, password } = req.body;
+    const errors: any = {};
+
+    if (isEmpty(name)) {
+      errors.name = 'Name Required.';
+    }
+
+    if (isEmpty(email)) {
+      errors.email = 'Email is required';
+    } else if (!isEmail(email)) {
+      errors.email = 'Should be valid email';
+    }
+
+    if (isEmpty(password)) {
+      errors.password = 'Password is required';
+    }
+
+    if (Object.keys(errors).length > 0) {
+      validationResponse(res, errors);
+    } else {
+      next();
+    }
+  }
 }
 
 export default new PublicValidations();
